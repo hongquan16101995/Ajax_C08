@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        button {
+            margin: 10px;
+        }
+
+        table {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body onload="getAllCustomer()">
+<button onclick="displayCreateForm()">Create new customer</button>
+<!--<button onclick="getAllCustomer()">List Customer</button>-->
+<div id="list_customer"></div>
+<div id="create" hidden>
+    <form>
+        <h1>Create form</h1>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><label><input type="text" id="name"></label></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><label><input type="text" id="age"></label></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><label><input type="text" id="address"></label></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="createCustomer()">Create</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div id="update" hidden>
+    <form>
+        <h1>Update form</h1>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><label><input type="text" id="name1"></label></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><label><input type="text" id="age1"></label></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><label><input type="text" id="address1"></label></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="update()">Update</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+<script src="index.js"></script>
+</html>
