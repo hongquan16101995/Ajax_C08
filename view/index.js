@@ -1,5 +1,10 @@
+let token = sessionStorage.getItem("token")
+
 function getAllCustomer() {
     $.ajax({
+        headers: {
+            Authorization: "Bearer " + token
+        },
         type: "GET",
         url: "http://localhost:8080/customers",
         success: function (a) {
@@ -94,7 +99,8 @@ function createCustomer() {
     $.ajax({
         headers: {
             'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            Authorization: "Bearer " + token
         },
         type: "POST",
         url: "http://localhost:8080/customers",
